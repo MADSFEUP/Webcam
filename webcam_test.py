@@ -4,12 +4,11 @@ import json
 
 
 class WebcamTestCase(unittest.TestCase):
-
     def setUp(self):
         webcam.app.config['TESTING'] = True
         self.app = webcam.app.test_client()
 
-    def test_empty_db(self):
+    def test_hello_world(self):
         rv = self.app.get('/')
         assert 'Hello World!' in rv.data
 
@@ -22,6 +21,7 @@ class WebcamTestCase(unittest.TestCase):
             print data[x]
            ## assert hasattr(data[x], 'id')
            ## assert hasattr(data[x], 'url')
+
 
 if __name__ == '__main__':
     unittest.main()
