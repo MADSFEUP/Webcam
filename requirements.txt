@@ -1,1 +1,2 @@
 Flask==0.10.1
+numpy==1.10.0.post2
