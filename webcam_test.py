@@ -10,7 +10,7 @@ class WebcamTestCase(unittest.TestCase):
 
     def test_hello_world(self):
         rv = self.app.get('/')
-        assert 'Hello World!' in rv.data
+        assert 'Video Streaming Demonstration' in rv.data
 
     def test_api_channels(self):
         rv = self.app.get('/channels')
